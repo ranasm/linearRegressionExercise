@@ -5,9 +5,9 @@ int main() {
     std::cout << "Implement linear regression using Gradient Descent!" << std::endl;
 
     std::vector<std::vector<float>> trainingData = {
-        {1, 2},
-        {2, 3},
-        {4, 3},
+        {1, 1},
+        {2, 2},
+        {3, 3}
     };
 
     float learningRate = 0.1;

@@ -21,8 +21,7 @@ std::vector<float> initializeWeights() {
 
 float calculateTrainingLoss(std::vector<float> weights, std::vector<std::vector<float>> trainingData) {
     float totalLoss = 0.0;
-    // float scaleFactor = 1 / (trainingData.size());
-    float scaleFactor = 0.33333;
+    float scaleFactor = float(1) / float((trainingData.size()));
     for (int i = 0; i < trainingData.size(); i++) {
         std::vector<float> xyDataPair = trainingData.at(i);
         float x = xyDataPair.at(0);
@@ -54,8 +53,7 @@ void addVectors(std::vector<float>& vec1, const std::vector<float>& vec2) {
 
 std::vector<float> calculateGradient(std::vector<float> weights, std::vector<std::vector<float>> trainingData) {
     std::vector<float> gradient(NUM_FEATURES,DEFAULT_WEIGHT_VALUE);
-    // float scaleFactor = 1 / (trainingData.size());
-    float scaleFactor = 0.33333;
+    float scaleFactor = float(1) / float((trainingData.size()));
     for (int i = 0; i < trainingData.size(); i++) {
         std::vector<float> xyDataPair = trainingData.at(i);
         float x = xyDataPair.at(0);
